@@ -1,8 +1,6 @@
 name := "play-hmrc-api"
 
-val scala3_3 = "3.3.7"
-
-ThisBuild / scalaVersion := scala3_3
+ThisBuild / scalaVersion := "3.3.7"
 ThisBuild / majorVersion := 9
 ThisBuild / isPublicArtefact := true
 ThisBuild / organization := "uk.gov.hmrc"
@@ -16,7 +14,6 @@ lazy val library = (project in file("."))
 
 lazy val play30 = Project("play-hmrc-api-play-30", file("play-30"))
   .settings(
-    scalaVersion := scala3_3,
     libraryDependencies ++= LibraryDependencies.play30 ++ LibraryDependencies.test30,
     sharedSources
   )
